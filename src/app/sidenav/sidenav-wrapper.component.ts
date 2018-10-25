@@ -1,16 +1,15 @@
-import {Component, OnDestroy, OnInit, ViewChild} from '@angular/core';
-import {SidenavComponent} from './sidenav.component';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {SidenavService} from './sidenav.service';
 import {Subscription} from 'rxjs';
 
 @Component({
   selector: 'app-sidenav-wrapper',
   templateUrl: './sidenav-wrapper.component.html',
-  styleUrls: ['./sidenav-wrapper.component.css']
+  styleUrls: ['./sidenav-wrapper.component.css'],
 })
 export class SidenavWrapperComponent implements OnInit, OnDestroy {
 
-  private closed: boolean = false;
+  private closed: boolean = true;
   private sidenavSubscription: Subscription;
 
   constructor(private sidenavService: SidenavService) {

@@ -7,10 +7,12 @@ import {AppRoutingModule} from './app-routing.module';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { SidenavWrapperComponent } from './sidenav/sidenav-wrapper.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
     imports: [
         BrowserModule,
+        BrowserAnimationsModule,
         NgbModule,
         DashboardModule,
         SharedModule,
