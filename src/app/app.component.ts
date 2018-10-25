@@ -4,11 +4,7 @@ import {Component, OnInit} from '@angular/core';
     selector: 'app-root',
     templateUrl: 'app.component.html'
 })
-export class AppComponent implements OnInit {
-    public readonly name = 'Pap3rW0rkz';
+export class AppComponent {
 
-    ngOnInit(): void {
-        console.log('component initialized');
-    }
 }
 

@@ -1,4 +1,23 @@
-<div>
-    <h2>Welcome to {{name}} Angular2!</h2>
-    Piranja
-</div>
+<app-sidenav-wrapper>
+    <app-sidenav #sidenav>
+        <h2>Pap3rW0rkz</h2>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+        </ul>
+    </app-sidenav>
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12"><div class="text-left"><button class="btn" (click)="sidenav.toggle()"><i class="fas fa-bars fa-xs"></i></button> </div></div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <router-outlet></router-outlet>
+                </div>
+            </div>
+        </div>
+    </div>
+</app-sidenav-wrapper>
