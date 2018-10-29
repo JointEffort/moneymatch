@@ -19,11 +19,11 @@ function createWindow() {
             electron: require(__dirname + "/node_modules/electron")
         });
         win.loadURL('http://localhost:4200');
-        win.webContents.openDevTools();
     }
     else {
-        win.loadFile('dist/index.html');
+        win.loadURL("file://" + __dirname + "/dist/index.html");
     }
+    win.webContents.openDevTools();
     // Emitted when the window is closed.
     win.on('closed', function () {
         // Dereference the window object, usually you would store window

@@ -5,6 +5,7 @@ import {NotFoundComponent} from './shared/not-found/not-found.component';
 
 const appRoutes: Routes = [
     {path: '', redirectTo: '/dashboard', pathMatch: 'full'},
+    {path: 'dist', redirectTo: '/dashboard', pathMatch: 'full'},
     {path: '**', component: NotFoundComponent},
 ];
 
@@ -12,7 +13,7 @@ const appRoutes: Routes = [
     imports: [
         RouterModule.forRoot(
             appRoutes,
-            {enableTracing: false})
+            {enableTracing: true, useHash: true})
     ],
     exports: [
         RouterModule

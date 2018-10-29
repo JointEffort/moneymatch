@@ -12,6 +12,8 @@ import {InkoopModule} from './inkoop/inkoop.module';
 import {VerkoopModule} from './verkoop/verkoop.module';
 import {CrediteurenModule} from './crediteuren/crediteuren.module';
 import {DebiteurenModule} from './debiteuren/debiteuren.module';
+import {APP_BASE_HREF} from '@angular/common';
+import {environment} from '../environments/environment';
 
 @NgModule({
     imports: [
@@ -27,6 +29,7 @@ import {DebiteurenModule} from './debiteuren/debiteuren.module';
         AppRoutingModule
     ],
     declarations: [AppComponent, SidenavComponent, SidenavWrapperComponent],
+    providers: [{provide: APP_BASE_HREF, useValue: environment.baseHref }],
     bootstrap: [AppComponent]
 })
 export class AppModule {
