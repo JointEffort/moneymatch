@@ -1,7 +1,7 @@
 {
-  "name": "pap3rw0rkz",
+  "name": "MoneyMatch",
   "version": "1.0.0",
-  "description": "A minimal financial administration app",
+  "description": "Electron / Angular learning app",
   "main": "main.js",
   "scripts": {
     "postinstall": "npm run postinstall:electron && npx electron-builder install-app-deps",
@@ -23,7 +23,7 @@
     "test": "npm run postinstall:web && ng test",
     "e2e": "npm run postinstall:web && ng e2e"
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://www.jointeffort.nl/",
   "keywords": [
     "electron",
     "angular",
