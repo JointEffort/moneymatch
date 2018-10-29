@@ -3,15 +3,14 @@ import {DashboardComponent} from './dashboard/dashboard.component';
 import {NgModule} from '@angular/core';
 
 
-const sharedRoutes: Routes = [
-    {path: 'dashboard', component: DashboardComponent, pathMatch: 'full'},
+const dashboardRoutes: Routes = [
+    {path: 'dashboard', component: DashboardComponent},
 ];
 
 @NgModule({
     imports: [
         RouterModule.forRoot(
-            sharedRoutes,
-            {enableTracing: false})
+            dashboardRoutes)
     ],
     exports: [
         RouterModule

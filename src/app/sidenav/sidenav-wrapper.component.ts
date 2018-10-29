@@ -9,7 +9,7 @@ import {Subscription} from 'rxjs';
 })
 export class SidenavWrapperComponent implements OnInit, OnDestroy {
 
-  private closed: boolean = true;
+  closed: boolean = true;
   private sidenavSubscription: Subscription;
 
   constructor(private sidenavService: SidenavService) {

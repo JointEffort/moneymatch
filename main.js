@@ -1,8 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var electron_1 = require("electron");
-var path = require("path");
-var url = require("url");
 var win, serve;
 var args = process.argv.slice(1);
 serve = args.some(function (val) { return val === '--serve'; });
@@ -21,15 +19,11 @@ function createWindow() {
             electron: require(__dirname + "/node_modules/electron")
         });
         win.loadURL('http://localhost:4200');
+        win.webContents.openDevTools();
     }
     else {
-        win.loadURL(url.format({
-            pathname: path.join(__dirname, 'dist/index.html'),
-            protocol: 'file:',
-            slashes: true
-        }));
+        win.loadFile('dist/index.html');
     }
-    win.webContents.openDevTools();
     // Emitted when the window is closed.
     win.on('closed', function () {
         // Dereference the window object, usually you would store window

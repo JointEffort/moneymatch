@@ -9,9 +9,9 @@ import {Subscription} from 'rxjs';
   styleUrls: ['./sidenav.component.css'],
   animations: [
       trigger('divState', [
-          state('open', style({'width' : '250px', 'padding' : '2em 1em'})),
+          state('open', style({'width' : '200px', 'padding' : '2em 1em'})),
           state('closed', style({'width' : '0', 'padding' : '0'})),
-          transition('closed => open', animate('300ms ease-out')),
+          transition('closed => open', animate('250ms ease-out')),
           transition('open => closed', animate('300ms ease-out')),
       ])
   ]
@@ -19,14 +19,13 @@ import {Subscription} from 'rxjs';
 export class SidenavComponent implements OnInit, OnDestroy {
 
   state = 'closed';
-  private closed : boolean = true;
+  closed : boolean = true;
   private sidenavSubscription : Subscription;
 
   constructor(private sidenavService : SidenavService) {
     this.sidenavSubscription = this.sidenavService.opened.subscribe( isOpen => {
       this.closed = !isOpen;
       this.state = isOpen ? 'open' : 'closed';
-      console.log(this.closed);
     });
   }
 
